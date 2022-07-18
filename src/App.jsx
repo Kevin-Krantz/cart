@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Product from "./Product";
+import Products from "./components/Products";
 
 class App extends Component {
   render() {
     return (
       <>
         <p>Hej!</p>
-        <Product />
+        <Products />
       </>
     );
   }

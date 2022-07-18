@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Product extends Component {
   state = {
-    quantity: 9,
+    quantity: 11,
   };
 
   handleIncrement = () => {
