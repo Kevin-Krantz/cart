@@ -3,20 +3,10 @@ import React, { Component } from "react";
 class Product extends Component {
   state = {
     quantity: 9,
-    tags: [
-      { name: "tag1", id: 1 },
-      { name: "tag2", id: 2 },
-      { name: "tag3", id: 3 },
-    ],
   };
 
   handleIncrement = () => {
     this.setState({ quantity: this.state.quantity + 1 });
-  };
-
-  handleDelete = (id) => {
-    const tags = this.state.tags.filter((tag) => tag.id !== id);
-    this.setState({ tags });
   };
 
   render() {
@@ -26,12 +16,6 @@ class Product extends Component {
         <button onClick={this.handleIncrement} className="btn btn-primary">
           Increment
         </button>
-        {this.state.tags.map((tag) => (
-          <li key={tag.id}>
-            {tag.name}
-            <button onClick={() => this.handleDelete(tag.id)}>delete</button>
-          </li>
-        ))}
       </div>
     );
   }
