@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Product extends Component {
   state = {
-    quantity: 11,
+    quantity: this.props.product.quantity,
   };
 
   handleIncrement = () => {
@@ -15,6 +15,12 @@ class Product extends Component {
         <span className={this.getBadgeClasses()}>{this.formatQuantity()}</span>
         <button onClick={this.handleIncrement} className="btn btn-primary">
           Increment
+        </button>
+        <button
+          onClick={() => this.props.onDelete(this.props.product.id)}
+          className="btn btn-danger ms-2"
+        >
+          Delete
         </button>
       </div>
     );

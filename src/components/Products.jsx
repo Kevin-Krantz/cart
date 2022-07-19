@@ -10,11 +10,21 @@ class Products extends Component {
       { id: 4, quantity: 11 },
     ],
   };
+
+  handleDelete = (id) => {
+    const products = this.state.products.filter((p) => p.id !== id);
+    this.setState({ products });
+  };
+
   render() {
     return (
       <>
         {this.state.products.map((product) => (
-          <Product />
+          <Product
+            key={product.id}
+            product={product}
+            onDelete={this.handleDelete}
+          />
         ))}
       </>
     );
