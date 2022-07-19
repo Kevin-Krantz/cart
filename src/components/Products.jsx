@@ -3,7 +3,7 @@ import Product from "./Product";
 
 class Products extends Component {
   render() {
-    const { onReset, onDelete, onIncrement, product } = this.props;
+    const { onReset, onDelete, onIncrement, onDecrement } = this.props;
 
     return (
       <div className="container mt-4">
@@ -16,6 +16,7 @@ class Products extends Component {
             product={product}
             onDelete={onDelete}
             onIncrement={onIncrement}
+            onDecrement={onDecrement}
           />
         ))}
       </div>
