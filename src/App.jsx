@@ -4,10 +4,9 @@ import Products from "./components/Products";
 class App extends Component {
   render() {
     return (
-      <>
-        <p>Hej!</p>
+      <div className="m-4">
         <Products />
-      </>
+      </div>
     );
   }
 }
