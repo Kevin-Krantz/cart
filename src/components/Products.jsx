@@ -3,7 +3,8 @@ import Product from "./Product";
 
 class Products extends Component {
   render() {
-    const { onReset, onDelete, onIncrement, onDecrement } = this.props;
+    const { onReset, onDelete, onIncrement, onDecrement, products } =
+      this.props;
 
     return (
       <div className="container mt-4">

@@ -46,13 +46,13 @@ class App extends Component {
 
     return (
       <>
-        <NavBar productCount={products.length} />
+        <NavBar productCount={products.filter((p) => p.quantity > 0).length} />
         <Products
           products={products}
           onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
           onReset={this.handleReset}
-          onDecrement={this.handleDecrement}
         />
       </>
     );
