@@ -12,6 +12,8 @@ class App extends Component {
     ],
   };
 
+  // hej
+
   handleDelete = (id) => {
     const products = this.state.products.filter((p) => p.id !== id);
     this.setState({ products });
